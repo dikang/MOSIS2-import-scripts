@@ -1,4 +1,4 @@
-# MOSIS 2.0 HubSpot Initial Setup
+# MOSIS 2.0 HubSpot Initial Setup (Tech Guide)
 
 ![Status](https://img.shields.io/badge/status-active-success)
 ![HubSpot](https://img.shields.io/badge/HubSpot-Integration-orange)
@@ -114,6 +114,8 @@ The following fields of HubSpot deals must be adjusted.
 ---
 
 ### 🧩 Pipeline Mapping
+All the imported deals are put the default pipeline and deal stage shown below.
+HubSpot user must change them.
 
 | Asana Workflow | HubSpot Pipeline |
 |---------------|----------------|
@@ -194,6 +196,8 @@ Import all files as:
 ---
 
 ## ⚙️ Pipeline Mapping
+All the imported deals are put the default pipeline and deal stage shown below.
+HubSpot user must change them.
 
 | File | Pipeline |
 |------|---------|
@@ -215,12 +219,13 @@ Forms are used for:
 
 Note:
 - All forms create tickets except NDA Information Collection form.
+- HubSpot users must not use the NDA Information Collection form directly. It is used in HubSpot Email template.
 
 ---
 
 ## ✅ Post-Import Checklist
 
-- [ ] Verify deal pipelines and stages.
+- [ ] Verify deal pipelines and stages and make changes.
 - [ ] Confirm attachments are linked.
 - [ ] Validate Notes content.
 - [ ] Check comment imports.
