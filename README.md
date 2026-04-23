@@ -93,21 +93,22 @@ Settings:
 ---
 
 ### 🔧 Data Fixes Required
+The following fields of HubSpot deals must be adjusted.
 
 | Field | Fix |
 |------|-----|
 | Task Assignee | Map emails to names |
-| Deal Stage | MPW/Fab mapping |
+| Deal Stage | MPW/Fab pipeline and stage mapping |
 
 ---
 
-### 🏷 Deal Naming (Asana)
+### 🏷 HubSpot Deal Naming (Asana)
 
 ```
-[A] {Record Name}-{Foundry}-{Index}-{First Name}
+[A] {Asana Record Name}-{Foundry}-{Index}-{First Name}
 ```
 
-- `[A]` = imported from Asana
+- `[A]` denotes it is imported from Asana
 - Omit fields if missing
 
 ---
@@ -129,7 +130,7 @@ Settings:
 python export_asana_projects_to_csv.py --projects projects.txt --outdir ./csv-total
 ```
 
-### Import as HubSpot Notes
+### Import as HubSpot Note
 
 ```bash
 python hubspot_import_comments_as_notes.py --input ./csv-total --log notes_import_log.csv
@@ -196,33 +197,35 @@ Import all files as:
 
 | File | Pipeline |
 |------|---------|
-| MPW.xlsx | Export Control Check (MPW) |
-| Fab.xlsx | Export Control Check (Fab) |
-| GOMACTech2025.xlsx | Initial Contact |
-| IMS2025.xlsx | Initial Contact |
+| MPW.xlsx | MPW [1. Customer Evaluation] |
+| Fab.xlsx | Fab [1. Customer Evaluation] |
+| GOMACTech2025.xlsx | M2 Initial Contact |
+| IMS2025.xlsx | M2 Initial Contact |
 
 ---
 
 ## 🧾 Forms
 
 Forms are used for:
-- Support requests
-- Onboarding
-- General inquiries
+- Support requests <https://41foi7.share-na2.hsforms.com/2AQ9QZXnnSf-KgVpNnNLmPQ>
+- Onboarding <https://41foi7.share-na2.hsforms.com/2pctH1Cx9SiqX27mwhUBeWw>
+- General inquiries <https://share-na2.hsforms.com/26iIaV3xGSNClslaHCTuhKQ41foi7>
+- MPW Run Request <https://41foi7.share-na2.hsforms.com/27qpYgGGsS9yn3TWTGp13HQ>
+- NDA Information Collection <https://41foi7.share-na2.hsforms.com/2j6cJQWvbTXCMBWSkg1U_kg>
 
 Note:
-- All forms create tickets except NDA form
+- All forms create tickets except NDA Information Collection form.
 
 ---
 
 ## ✅ Post-Import Checklist
 
-- [ ] Verify deal pipelines and stages
-- [ ] Confirm attachments are linked
-- [ ] Validate Notes content
-- [ ] Check comment imports
-- [ ] Test all forms
-- [ ] Verify sample deals manually
+- [ ] Verify deal pipelines and stages.
+- [ ] Confirm attachments are linked.
+- [ ] Validate Notes content.
+- [ ] Check comment imports.
+- [ ] Test all forms. Once the tests are passed, embed the forms to MOSIS 2.0 homepage.
+- [ ] Verify sample deals manually.
 
 ---
 
